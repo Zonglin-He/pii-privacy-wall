@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f6f7f9"><title>Privacy Wall — Document workspace</title>
+<link rel="icon" href="data:,"><link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script>
+</head>
+<body>
+<svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+<symbol id="document" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+<symbol id="upload" viewBox="0 0 24 24"><path d="M12 16V4m-5 5 5-5 5 5M4 16v4h16v-4"/></symbol>
+<symbol id="terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m7 9 3 3-3 3m6 0h4"/></symbol>
+<symbol id="info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+<symbol id="lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/></symbol>
+<symbol id="copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V3H3v13h5"/></symbol>
+</defs></svg>
+<aside class="sidebar">
+<a class="brand" href="/" aria-label="Privacy Wall home"><span class="brand-icon"><svg><use href="#shield"/></svg></span>privacy<span class="brand-light">wall</span><span class="brand-period">.</span></a>
+<div class="workspace-label">PERSONAL WORKSPACE</div>
+<nav aria-label="Workspace navigation">
+<a class="nav-link active" href="#workspace" aria-label="Document masking"><svg><use href="#document"/></svg><span>Document masking</span><span class="nav-count">01</span></a>
+<a class="nav-link" href="#verification" aria-label="Outbound verification"><svg><use href="#terminal"/></svg><span>Outbound verification</span></a>
+<a class="nav-link" href="#coverage" aria-label="Coverage and limits"><svg><use href="#info"/></svg><span>Coverage &amp; limits</span></a>
+</nav>
+<div class="sidebar-bottom"><div class="privacy-card"><svg><use href="#lock"/></svg><strong>Your device. Your data.</strong><p>No external AI calls.<br>No API key required.</p><span><i class="dot"></i> Local environment</span></div><div class="sidebar-foot"><span class="avatar">L</span><div>Local workspace<small>Service 01 · AI track</small></div><span class="version">v0.1</span></div></div>
+</aside>
+<div class="app-shell">
+<header class="topbar"><div class="breadcrumb">Workspace <span>/</span> <strong>Document masking</strong></div><div class="topbar-right"><span class="session-status"><i class="dot"></i> Private session</span><span class="header-divider"></span><span class="local-label">LOCAL DEMO</span></div></header>
+<main>
+<section class="intro"><div><div class="eyebrow"><span></span> THE PRIVACY LAYER</div><h1>Privacy starts here.</h1><p>Keep the context. Remove the identifiers.<br>Prepare your documents for a safer next step.</p></div><div class="flow-card" aria-label="Local privacy pipeline"><div class="flow-icons"><span><svg><use href="#document"/></svg></span><i></i><span class="flow-shield"><svg><use href="#shield"/></svg></span><i></i><span><svg><use href="#terminal"/></svg></span></div><div class="flow-labels"><span>Document</span><span>Privacy wall</span><span>Safe request</span></div><small>Processed on your device, start to finish.</small></div></section>
+<section class="metrics" aria-label="Detection summary">
+<div><span>PII occurrences</span><strong id="metric-total">—</strong><small>Detected in this document</small></div>
+<div><span>Entity types</span><strong id="metric-types">—<em> / 7</em></strong><small>Stable, document-scoped tokens</small></div>
+<div><span>Processing time</span><strong id="metric-time">—</strong><small>Detection + encrypted storage</small></div>
+<div class="metric-status"><span>Outbound checks</span><strong id="metric-wire">Not checked</strong><small id="metric-wire-note">Local HTTP receiver</small></div>
+</section>
+<div class="section-label" id="workspace"><span>DOCUMENT WORKSPACE</span><span>TXT files <b>·</b> Up to 100,000 characters</span></div>
+<div class="workspace">
+<section class="panel input-panel" aria-labelledby="input-title">
+<div class="panel-heading"><div><span class="step">01</span><h2 id="input-title">Source document</h2></div><span class="tag"><svg><use href="#lock"/></svg> Local only</span></div>
+<div class="sample-row"><span>Try a sample</span><button class="sample" data-sample="mixed">Agreement</button><button class="sample" data-sample="clean">Clean control</button><button class="sample" data-sample="edge">Edge cases</button></div>
+<label class="upload" id="drop-zone" for="file-input"><span class="upload-icon"><svg><use href="#upload"/></svg></span><strong>Drop your document here, <span>or browse</span></strong><small>UTF-8 .txt files only</small><input id="file-input" type="file" accept=".txt,text/plain" aria-label="Upload TXT document"></label>
+<div class="editor-label"><label for="source">DOCUMENT TEXT</label><span id="char-count">0 / 100,000</span></div>
+<textarea id="source" maxlength="100000" spellcheck="false" autocomplete="off" placeholder="Client: Jane Smith&#10;Email: jane.smith@example.test&#10;Account #AC-99120&#10;&#10;Paste a document or start with a sample above."></textarea>
+<div class="input-footer"><span><svg><use href="#lock"/></svg> File names are never sent</span><button class="primary" id="mask-button" disabled>Mask document <svg><use href="#arrow"/></svg></button></div>
+</section>
+<section class="panel output-panel" aria-labelledby="output-title">
+<div class="panel-heading"><div><span class="step">02</span><h2 id="output-title">Protected document</h2></div><span class="tag" id="result-tag">Awaiting input</span></div>
+<div class="output-toolbar"><div class="tabs" role="group" aria-label="Result view"><button class="tab active" id="masked-tab" disabled>Masked</button><button class="tab" id="restore-button" disabled>Restore original</button></div><button class="text-button copy-button" id="copy-button" disabled><svg><use href="#copy"/></svg> Copy</button></div>
+<div id="empty-state" class="empty-state"><div class="empty-art"><div class="document-mini"><div class="mini-heading"></div><div class="mini-line"></div><div class="mini-line short"></div><strong>[CLIENT_1]</strong><div class="mini-line"></div><div class="mini-line short"></div></div><span class="shield-float"><svg><use href="#shield"/></svg></span></div><h3>A little less personal.<br>Just as meaningful.</h3><p>Your masked document will appear here.<br>The original stays within your session.</p></div>
+<pre id="result" class="document" tabindex="0" hidden></pre>
+<div class="entity-legend" id="legend"><span>Person</span><span>Email</span><span>Phone</span><span>Address</span><span>SSN</span><span>Account</span><span>Amount</span></div>
+<div class="result-footer"><span id="result-note">Encrypted mapping · Session-authorized restore</span><button id="delete-button" class="text-button" disabled>Delete document</button></div>
+</section>
+</div>
+<section class="panel verification" id="verification" aria-labelledby="verify-title">
+<div class="verify-top"><div class="verify-title-group"><span class="verify-icon"><svg><use href="#terminal"/></svg></span><div><div class="eyebrow">03 / VERIFY THE BOUNDARY</div><h2 id="verify-title">See what actually leaves.</h2><p>Inspect requests captured by a local HTTP receiver.</p></div></div><div class="verify-actions"><button class="secondary" id="complete-button" disabled>Test completion <svg><use href="#arrow"/></svg></button><button class="secondary" id="embed-button" disabled>Test embedding <svg><use href="#arrow"/></svg></button></div></div>
+<div class="wire-status" id="wire-status" role="status">No requests sent yet. This is a local mock service, not an AI model.</div>
+<details id="payload-details" hidden><summary>Captured request body <span>DEVELOPER VIEW</span></summary><pre id="payload"></pre><div class="hash-row" id="payload-hash"></div></details>
+</section>
+<aside class="scope-note" id="coverage"><svg><use href="#info"/></svg><div><strong>Transparent by design.</strong><p>Heuristic detection for English financial text and common US formats. Verification covers <b>detected entities</b>, not every possible identifier. Review the output before using it. No compliance decisions are made.</p></div></aside>
+<footer><span>PRIVACY WALL <b>/</b> SERVICE 01</span><span>Local processing. Measurable protection.</span></footer>
+</main>
+</div>
+<div id="notice" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

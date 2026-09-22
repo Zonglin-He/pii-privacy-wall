@@ -1,0 +1,15 @@
+INVESTMENT AGREEMENT — synthetic demonstration
+
+Client: Jane Smith
+Email: jane.smith@example.test
+Phone: +1 (212) 555-0147
+Address: 123 Maple Street, Springfield, IL 62704
+SSN: 987-65-4321
+Account #AC-99120
+
+Jane Smith holds a portfolio balance of $125,000.00.
+We guarantee Jane Smith an 18% annual return without any market risk.
+
+Benchmark: S&P 500. Public research subscription price: $49.00.
+This demo masks personal information; it does not evaluate financial compliance.
+

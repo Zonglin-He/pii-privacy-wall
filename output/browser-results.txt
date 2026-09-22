@@ -1,0 +1,1 @@
+{"status":"PASS","checks":["seven-types","stable-tokens","exact-restore","completion-HTTP","embedding-HTTP","masked-clipboard","clean-control","unicode-highlights","HTML-as-text","TXT-upload","mobile-layout","delete","no-browser-storage"],"browserErrors":[]}
